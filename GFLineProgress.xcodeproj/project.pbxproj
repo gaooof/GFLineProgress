@@ -15,7 +15,7 @@
 		1892FB931C5DF587008E1548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1892FB911C5DF587008E1548 /* LaunchScreen.storyboard */; };
 		1892FB9E1C5DF587008E1548 /* LineProgressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892FB9D1C5DF587008E1548 /* LineProgressTests.m */; };
 		1892FBA91C5DF587008E1548 /* LineProgressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892FBA81C5DF587008E1548 /* LineProgressUITests.m */; };
-		1892FBBB1C5E25ED008E1548 /* GFTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892FBBA1C5E25ED008E1548 /* GFTimeLineView.m */; };
+		18B81AF31C75F29E00ED8CCE /* GFLineProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B81AF21C75F29E00ED8CCE /* GFLineProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		1892FBA41C5DF587008E1548 /* GFLineProgress.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GFLineProgress.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1892FBA81C5DF587008E1548 /* LineProgressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineProgressUITests.m; sourceTree = "<group>"; };
 		1892FBAA1C5DF587008E1548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1892FBB91C5E25ED008E1548 /* GFTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFTimeLineView.h; sourceTree = "<group>"; };
-		1892FBBA1C5E25ED008E1548 /* GFTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFTimeLineView.m; sourceTree = "<group>"; };
+		18B81AF11C75F29E00ED8CCE /* GFLineProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLineProgressView.h; sourceTree = "<group>"; };
+		18B81AF21C75F29E00ED8CCE /* GFLineProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLineProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +104,12 @@
 		1892FB821C5DF587008E1548 /* LineProgress */ = {
 			isa = PBXGroup;
 			children = (
+				18B81AF11C75F29E00ED8CCE /* GFLineProgressView.h */,
+				18B81AF21C75F29E00ED8CCE /* GFLineProgressView.m */,
 				1892FB861C5DF587008E1548 /* AppDelegate.h */,
 				1892FB871C5DF587008E1548 /* AppDelegate.m */,
 				1892FB891C5DF587008E1548 /* ViewController.h */,
 				1892FB8A1C5DF587008E1548 /* ViewController.m */,
-				1892FBB91C5E25ED008E1548 /* GFTimeLineView.h */,
-				1892FBBA1C5E25ED008E1548 /* GFTimeLineView.m */,
 				1892FB8C1C5DF587008E1548 /* Main.storyboard */,
 				1892FB8F1C5DF587008E1548 /* Assets.xcassets */,
 				1892FB911C5DF587008E1548 /* LaunchScreen.storyboard */,
@@ -279,7 +279,7 @@
 				1892FB8B1C5DF587008E1548 /* ViewController.m in Sources */,
 				1892FB881C5DF587008E1548 /* AppDelegate.m in Sources */,
 				1892FB851C5DF587008E1548 /* main.m in Sources */,
-				1892FBBB1C5E25ED008E1548 /* GFTimeLineView.m in Sources */,
+				18B81AF31C75F29E00ED8CCE /* GFLineProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

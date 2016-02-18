@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimeLineView : UIView
+@interface GFLineProgressView : UIView
 
 @property (nonatomic,assign) double lineProgress;
 @property (nonatomic,weak) UIColor *lineProgressBackground;
 @property (nonatomic,weak) UIColor *lineProgressColor;
-
+@property (nonatomic,assign)CGFloat lineProgressdurationTime;
 - (instancetype)initWithFrame:(CGRect)frame;
--(void)timeLineAnimationWithdurationTime:(CGFloat)durationTime ;
 
 @end

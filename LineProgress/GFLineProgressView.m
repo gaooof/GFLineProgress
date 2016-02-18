@@ -6,19 +6,20 @@
 //  Copyright © 2016年 Gaooof. All rights reserved.
 //
 
-#import "GFTimeLineView.h"
+#import "GFLineProgressView.h"
 
-@interface TimeLineView ()
-@property (nonatomic,strong)UIView *timeLineView;
+@interface GFLineProgressView ()
+@property (nonatomic,strong)UIView *lineProgressView;
 @end
 
-@implementation TimeLineView
+@implementation GFLineProgressView
 
 -(void)setLineProgress:(double)lineProgress{
     if (lineProgress<0 || lineProgress>1) {
         return;
     }
     _lineProgress=lineProgress;
+    [self createLineProgress];
 }
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -26,26 +27,23 @@
         CGFloat TLViewH=self.frame.size.height;
         CGFloat TLViewX=0;
         CGFloat TLViewY=0;
-        _timeLineView=[[UIView alloc] initWithFrame:CGRectMake(TLViewX, TLViewY, TLViewW, TLViewH)];
-        _timeLineView.backgroundColor=self.lineProgressBackground;
-
-        [self addSubview:_timeLineView];
+        _lineProgressView=[[UIView alloc] initWithFrame:CGRectMake(TLViewX, TLViewY, TLViewW, TLViewH)];
+        _lineProgressView.backgroundColor=self.lineProgressBackground;
+        [self addSubview:_lineProgressView];
     }
     return self;
 }
 
 
 
-
--(void)timeLineAnimationWithdurationTime:(CGFloat)durationTime{
-    
+-(void)createLineProgress{
     //进度条
     CALayer *layer=[CALayer layer];
     
     //进度条初始化大小
-    layer.bounds=CGRectMake(0, 0, _timeLineView.bounds.size.width, 0);
+    layer.bounds=CGRectMake(0, 0, _lineProgressView.bounds.size.width, 0);
     
-    layer.position=CGPointMake(0, _timeLineView.frame.size.height);
+    layer.position=CGPointMake(0, _lineProgressView.frame.size.height);
     layer.anchorPoint=CGPointMake(0, 1);
     layer.backgroundColor=[UIColor whiteColor].CGColor;
     [self.layer addSublayer:layer];
@@ -65,7 +63,7 @@
     
     
     group.animations=@[changeHeight,changeColor];
-    group.duration=durationTime;
+    group.duration=_lineProgressdurationTime;
     group.removedOnCompletion=NO;
     group.fillMode=kCAFillModeForwards;
     [layer addAnimation:group forKey:nil];
